@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robert Fox</title>
+        <link rel="icon" href="RFfavicon.png">
+        <link rel="stylesheet" href="RobertFoxStylesheet.css">
+        
+        <meta charset="UTF-8">
+        <meta name="title" content="Robert Fox">
+        <meta name="keywords" content="UI designer web developer freelance">
+        <meta name="description" content="Hey there, I'm Robert Fox. Freelance UI Designer and Web Developer.">
+        <meta name="author" content="Robert Fox">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <script defer src="app.js"></script>
+    </head>
+    <body>
+        <script defer>
+            /*only works after you click the menu button 2 times, fix this shit*/
+            function myFunction() { 
+                var x = document.getElementById("dropdown_nav"); 
+                if (x.style.display == "none") {
+                x.style.display = "block";
+                x.style.animationDirection="normal";
+                x.className = 'drop_anim';
+              } else {
+                x.style.animationDirection="reverse";
+                x.className = 'drop_anim';
+                setTimeout(() => {x.style.display = "none";}, "300")
+              }
+              setTimeout(() => {x.className = '';}, "300")
+            }
+        </script>
+        
+        <section class="Header">
+            <div class="header">
+                <div class="navigation">
+                    <a href="Index.html"><img src="RobertFoxLogo.png" alt="Robert Fox Logo"></a>
+                    <div class="nav_text"><a href="AboutMe.html">About Me</a></div>
+                    <div class="nav_text"><a href="Contact.html">Contact</a></div>
+                </div>
+                <div class="logo_divider"></div>
+                <div class="contact_social">
+                    <div class="contact">
+                        <div class="contact_text"><a href="mailto:hello@robertfox.design">hello@robertfox.design</a></div>
+                        <div class="contact_text">(704) 555-0127</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="social">
+                        <a href=""><img src="./SocialIcons/twitter.png" alt="Twitter" class="si"></a>
+                        <a href=""><img src="./SocialIcons/instagram.png" alt="Instagram" class="si"></a>
+                        <a href=""><img src="./SocialIcons/dribble.png" alt="Dribble" class="si"></a>
+                    </div>
+                    <!--<div class="divider"></div>               
+                    <div class="theme_switch_laptop">
+                        <button onclick="switchToDark()" style="display: none;" id="light_theme_icon"><img src="./SocialIcons/Sun.png" alt="light theme"></button>
+                        <button onclick="switchToLight()" id="dark_theme_icon"><img src="./SocialIcons/Moon.png" alt="dark theme"></button>
+                        <script>
+                            var a = document.getElementById("light_theme_icon");
+                            var b = document.getElementById("dark_theme_icon");  
+                            function switchToDark(){
+                                a.style.display = "none";
+                                b.style.display = "block";
+                                console.log("switched theme to dark");
+                            }
+                            function switchToLight(){
+                                a.style.display = "block";
+                                b.style.display = "none";
+                                console.log("switched theme to light");
+                            }
+                        </script>
+                    </div>-->
+                </div>
+                <div class="logo_divider"></div>
+                <a href="javascript:void(0);" class="menu_button" onclick="myFunction()">
+                    <img src="./menu.png" alt="menu">
+                </a>
+            </div>
+            <hr>
+            <div id="dropdown_nav" class="">
+                <div class="nav_text_drop"><a href="AboutMe.html">About Me</a></div>
+                <div class="nav_text_drop"><a href="Contact.html">Contact</a></div>
+                <div class="contact_text_drop"><a href="mailto:hello@robertfox.design">hello@robertfox.design</a></div>
+                <div class="contact_text_drop">(704) 555-0127</div>
+                <!--<div class="theme_switch_mobile">
+                    <button onclick="switchToDark()" style="display: none;" id="light_theme_icon"><img src="./SocialIcons/Sun.png" alt="light theme"></button>
+                    <button onclick="switchToLight()" id="dark_theme_icon"><img src="./SocialIcons/Moon.png" alt="dark theme"></button>
+                    <script>
+                        var a = document.getElementById("light_theme_icon");
+                        var b = document.getElementById("dark_theme_icon");  
+                        function switchToDark(){
+                            a.style.display = "none";
+                            b.style.display = "block";
+                            console.log("switched theme to dark");
+                        }
+                        function switchToLight(){
+                            a.style.display = "block";
+                            b.style.display = "none";
+                            console.log("switched theme to light");
+                        }
+                    </script>
+                </div>-->
+                <hr class="hr_drop">
+            </div>
+        </section>
+
+        <section class="HeroArea">
+            <div style="padding-top: 64px;"></div>
+            <div class="heroarea">
+                <div class="H3 gradient" style="padding-bottom: 32px;">Hey there, I’m Robert Fox</div>
+                <div class="H1 black" style="padding-bottom: 32px;">Freelance UI Designer & Web Developer</div>
+                    <div class="rf_def paragraph black75">
+                        I help business grow by crafting amazing web experiences. If you’re looking for a designer and developer that likes to get stuff done, let’s talk.
+                    </div>
+                    <!--this should scroll to portoflio section-->
+                    <div style="display: flex; justify-content: center;"><a href="#portfolio" class="primary_button" style="text-decoration: none;"><div class="button_text H5_medium white">See my work</div><img class="button_text" src="./SocialIcons/ArrowDown.png" alt="arrow down"></a></div>
+            </div>
+        </section>
+
+        <section class="Clients">
+            <div class="clients">
+                <div class="H5_medium black75 hidden" style="display: grid; padding-bottom: 64px; width: auto; margin: 0px 64px;">I had pleasure of working with these brands</div>
+                <div class="client_logos" style="justify-content: center; height: 100%;">
+                    <img class="client_logo hidden" src="./SocialIcons/amazon.png" alt="amazon">
+                    <img class="client_logo hidden" src="./SocialIcons/adobe.png" alt="adobe">
+                    <br class="client_br">
+                    <img class="client_logo hidden" src="./SocialIcons/apple.png" alt="apple">
+                    <img class="client_logo hidden" src="./SocialIcons/github.png" alt="github">
+                    <br class="client_br">
+                    <img class="client_logo hidden" src="./SocialIcons/microsoft.png" alt="microsoft">
+                </div>
+            </div>
+        </section>
+
+        <section class="Portfolio" id="portfolio">
+            <div class="portfolio">
+                <div class="title">
+                    <div class="H3_bold black" style="padding-bottom: 16px;">My Work</div>
+                    <div class="portfolio_subtitle paragraph black75">I specialize in website design and development, but I’ve also designed successful iOS and Android apps.</div>
+                </div>
+                <div class="show">
+                    <div class="show" style="background: #7F63F4;"><img class="show_img" src="./Portfolio/Image1.png" alt="portoflio item"></div>
+                    <div class="show" style="background: #43CB83;"><img class="show_img" src="./Portfolio/Image2.png" alt="portoflio item"></div>
+                    <div class="show" style="background: #F08084;"><img class="show_img" src="./Portfolio/Image3.png" alt="portoflio item"></div>
+                    <div class="testimonial">
+                            <div style="vertical-align: middle; padding-bottom: 32px;">
+                                <img src="./Testimonials/AmazonTestimonial.png" alt="Picture and Amazon Logo" style="vertical-align: middle; padding-right: 32px;">
+                                <div style="display: inline-block; vertical-align: middle;">
+                                    <div class="H4 black">James Wittings</div>
+                                    <div class="H6_medium black75" style="text-align: left;">Marketing Director at Amazon</div>
+                                </div>
+                            </div>
+                            <div class="testimonial_text H4_regular black75">“Working with Robert has been an absolute pleasure and we’ll definitely turn to his expertise for new projects.”</div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </section>
+
+        <section class="CTA">
+            <div class="cta">
+                <div class="cta_button_space" style="text-align: left;">
+                    <div class="H4 black" style="padding-bottom: 32px;">I’m currently available<br class="cta_br"> for freelance work</div>
+                    <div class="paragraph black75" style="padding-bottom: 32px; text-align: left;">If you’re looking for a designer and developer that likes to get stuff <br class="cta_br">done, let’s talk.</div>
+                    <div>
+                        <div class="cta_contact_text"><a href="mailto:hello@robertfox.design">hello@robertfox.design</a></div><div>(704) 555-0127</div>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: left;"><a href="./Contact.html" class="primary_button cta_button" style="text-decoration: none;"><div class="button_text H5_medium white">Got a Project in Mind? Let's talk!</div></a></div>
+                <div style="display: flex; justify-content: left;"><a href="./Contact.html" class="primary_button mobile_cta_button" style="text-decoration: none;"><div class="button_text H5_medium white">Let's talk!</div></a></div>
+            </div>
+        </section>
+
+        <section class="Footer">
+            <hr>
+            <div class="footer">
+                <div class="footer_copy_text"><a href="">(c) Copyright Robert Fox 2022. All rights reserved.</a></div>
+                <div class="footer_navigation">
+                    <div class="footer_nav_text" style="float: left; padding-right: 64px;"><a href="">PrivacyPolicy</a></div>
+                    <div class="footer_nav_text" style="float: left"><a href="">Terms&Conditions</a></div>
+                </div>
+                <div class="social">
+                    <a href=""><img src="./SocialIcons/twitter.png" alt="Twitter" class="si"></a>
+                    <a href=""><img src="./SocialIcons/instagram.png" alt="Instagram" class="si"></a>
+                    <a href=""><img src="./SocialIcons/dribble.png" alt="Dribble" class="si"></a>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

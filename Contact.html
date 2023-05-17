@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact | Robert Fox</title>
+        <link rel="icon" href="RFfavicon.png">
+        <link rel="stylesheet" href="RobertFoxStylesheet.css">
+        
+        <meta charset="UTF-8">
+        <meta name="title" content="Contact|Robert Fox">
+        <meta name="keywords" content="UI designer web developer freelance">
+        <meta name="description" content="Hey there, I'm Robert Fox. Freelance UI Designer and Web Developer.">
+        <meta name="author" content="Robert Fox">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /*only works after uou click the menu button 2 times, fix this shit*/
+            function myFunction() { 
+            var x = document.getElementById("dropdown_nav"); 
+              if (x.style.display == "none") {
+                x.style.display = "block";
+                x.style.animationDirection="normal";
+                x.className = 'drop_anim';
+              } else {
+                x.style.animationDirection="reverse";
+                x.className = 'drop_anim';
+                setTimeout(() => {x.style.display = "none";}, "300")
+              }
+              setTimeout(() => {x.className = '';}, "300")
+            }
+        </script>
+        
+        <section class="Header">
+            <div class="header">
+                <div class="navigation">
+                    <a href="Index.html"><img src="RobertFoxLogo.png" alt="Robert Fox Logo"></a>
+                    <div class="nav_text"><a href="AboutMe.html">About Me</a></div>
+                    <div class="active_nav_text"><a href="Contact.html">Contact</a></div>
+                </div>
+                <div class="logo_divider"></div>
+                <div class="contact_social">
+                    <div class="contact">
+                        <div class="contact_text"><a href="mailto:hello@robertfox.design">hello@robertfox.design</a></div>
+                        <div class="contact_text">(704) 555-0127</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="social">
+                        <a href=""><img src="./SocialIcons/twitter.png" alt="Twitter" class="si"></a>
+                        <a href=""><img src="./SocialIcons/instagram.png" alt="Instagram" class="si"></a>
+                        <a href=""><img src="./SocialIcons/dribble.png" alt="Dribble" class="si"></a>
+                    </div>
+                </div>
+                <div class="logo_divider"></div>
+                <a href="javascript:void(0);" class="menu_button" onclick="myFunction()">
+                    <img src="./menu.png" alt="menu">
+                </a>
+            </div>
+            <hr>
+            <div id="dropdown_nav" class="">
+                <div class="nav_text_drop"><a href="AboutMe.html">About Me</a></div>
+                <div class="active_nav_text_drop"><a href="Contact.html">Contact</a></div>
+                <div class="contact_text_drop"><a href="mailto:hello@robertfox.design">hello@robertfox.design</a></div>
+                <div class="contact_text_drop">(704) 555-0127</div>
+                <hr class="hr_drop">
+            </div>
+        </section>
+    
+        <section class="CTA">
+            <div class="cta">
+                <div class="cta_button_space" style="text-align: left;">
+                    <div class="H4 black" style="padding-bottom: 32px;">I’m currently available<br class="cta_br"> for freelance work</div>
+                    <div class="paragraph black75" style="padding-bottom: 32px; text-align: left;">If you’re looking for a designer and developer that likes to get stuff <br class="cta_br">done, let’s talk.</div>
+                    <div>
+                        <div class="cta_contact_text"><a href="mailto:hello@robertfox.design" class="H5">hello@robertfox.design</a></div><div class="H5">(704) 555-0127</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="FAQ">
+            <div class="faq">
+                <div class="faq_title H3 black" style="text-align: left;">Before sending me a message, here are some things you should know:</div>
+                <button class="accordion H4">What timezone are you in?</button>
+                <div class="panel paragraph black75" style="text-align: left;">
+                    <p>I live in New York so EST (UTC -5).</p>
+                </div>
+                <hr>
+                <button class="accordion H4">Do we make a contract?</button>
+                <div class="panel paragraph black75" style="text-align: left;">
+                    <p>Absolutely. A contract protects us both and ensures that both parties have a good collaboration.</p>
+                </div>
+                <hr>
+                <button class="accordion H4">How much do you charge for a website?</button>
+                <div class="panel paragraph black75" style="text-align: left;">
+                    <p>There is no fixed price. Every website is different and I’ll only be able to give an accurate offer once we’ve had a talk.</p>
+                </div>
+                <hr>
+                <button class="accordion H4">Do you charge by the hour?</button>
+                <div class="panel paragraph black75" style="text-align: left;">
+                    <p>I do not charge by the hour. I prefer to eliminate the stress of counting the hours. Instead, I charge a flat fee per project, regardless of duration.</p>
+                </div>
+                <hr>
+                <button class="accordion H4">Are you working with a team?</button>
+                <div class="panel paragraph black75" style="text-align: left;">
+                    <p>Not at the moment. I’m flying solo.</p>
+                </div>
+                <hr>
+            </div>
+                <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                            } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        } 
+                    });
+                }
+                </script>
+        </section>
+
+        <section class="Form">
+            <div class="form">
+                <div class="form_title H3 gradient">Got a project in mind?</div>
+                <div class="form_subtitle paragraph black75">Use the form to give me as much detail as possible and I’ll get back to you as soon as I can.</div>
+
+                <form action="" id="contct_form">
+                    <div class="row">
+                        <div class="column">
+                            <label for="name" class="field_title H5 black">Your Name</label><br>
+                            <input type="text" required placeholder="Name" id="name" name="name" class="field paragraph black75" style="text-align: left;"><br>
+                        </div>
+                        <div class="column">
+                            <label for="email" class="field_title H5 black">Your Email</label><br>
+                            <input type="email" required placeholder="Email" id="email" name="email" class="field paragraph black75" style="text-align: left;"><br>
+                        </div>
+                    </div>
+                    <label for="project_details" class="field_title H5 black">Project Details</label><br>
+                    <row><textarea name="project_details" required placeholder="Project Details" form="contact_form" class="paragraph black75" style="text-align: left;"></textarea></row>
+                    <div class="row">
+                        <div class="column">
+                            <label for="budget" class="field_title H5 black">Your Budget</label><br>
+                            <input type="text" placeholder="Budget" id="budget" name="budget" class="field paragraph black75" style="text-align: left;"><br>
+                        </div>
+                        <div class="column">
+                            <label for="timeline" class="field_title H5 black">Your Timeline</label><br>
+                            <input type="text" placeholder="Timeline" id="timeline" name="email" class="field paragraph black75" style="text-align: left;"><br>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit" name="submit" class="submit_button primary_button H5_medium">Send message<img src="./SocialIcons/Send.png" alt="send icon"></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="Footer">
+            <hr>
+            <div class="footer">
+                <div class="footer_copy_text"><a href="">(c) Copyright Robert Fox 2022. All rights reserved.</a></div>
+                <div class="footer_navigation">
+                    <div class="footer_nav_text" style="float: left; padding-right: 64px;"><a href="">PrivacyPolicy</a></div>
+                    <div class="footer_nav_text" style="float: left"><a href="">Terms&Conditions</a></div>
+                </div>
+                <div class="social">
+                    <a href=""><img src="./SocialIcons/twitter.png" alt="Twitter" class="si"></a>
+                    <a href=""><img src="./SocialIcons/instagram.png" alt="Instagram" class="si"></a>
+                    <a href=""><img src="./SocialIcons/dribble.png" alt="Dribble" class="si"></a>
+                </div>
+            </div>
+        </section>
+    
+        </body>
+</html>
