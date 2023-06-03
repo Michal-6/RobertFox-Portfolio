@@ -13,9 +13,10 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 /*-----------------------------------------------------------*/
+var x = document.getElementById("dropdown_nav"); 
+x.style.display = "none";
 function myFunction() { 
-                var x = document.getElementById("dropdown_nav"); 
-                if (x.style.display == "none") {
+            if (x.style.display == "none") {
                 x.style.display = "block";
                 x.style.animationDirection="normal";
                 x.className = 'drop_anim';
