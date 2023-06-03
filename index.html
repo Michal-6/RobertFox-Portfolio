@@ -15,23 +15,6 @@
         <script defer src="app.js"></script>
     </head>
     <body>
-        <script defer>
-            /*only works after you click the menu button 2 times, fix this shit*/
-            function myFunction() { 
-                var x = document.getElementById("dropdown_nav"); 
-                if (x.style.display == "none") {
-                x.style.display = "block";
-                x.style.animationDirection="normal";
-                x.className = 'drop_anim';
-              } else {
-                x.style.animationDirection="reverse";
-                x.className = 'drop_anim';
-                setTimeout(() => {x.style.display = "none";}, "300")
-              }
-              setTimeout(() => {x.className = '';}, "300")
-            }
-        </script>
-        
         <section class="Header">
             <div class="header">
                 <div class="navigation">
